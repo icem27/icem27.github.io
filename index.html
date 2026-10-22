@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sin identidad: SinPasarte y Eurify, dos proyectos web</title>
+<meta name="description" content="SinPasarte encuentra gasolineras baratas y puntos de recarga eléctrica en España. Eurify controla tus gastos e ingresos en euros desde el móvil.">
+<link rel="canonical" href="https://sinidentidad.me/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#101820">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Sin identidad">
+<meta property="og:title" content="Sin identidad: SinPasarte y Eurify">
+<meta property="og:description" content="Dos proyectos web: gasolineras baratas y recarga eléctrica en España, y control de gastos personales en euros.">
+<meta property="og:url" content="https://sinidentidad.me/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebSite","@id":"https://sinidentidad.me/#web","url":"https://sinidentidad.me/","name":"Sin identidad","inLanguage":"es"},
+{"@type":"ItemList","itemListElement":[
+{"@type":"ListItem","position":1,"item":{"@type":"WebApplication","name":"SinPasarte","url":"https://sinpasarte.com","description":"Gasolineras baratas y puntos de recarga de coche eléctrico en España, con rutas y favoritos.","applicationCategory":"TravelApplication","operatingSystem":"Web","inLanguage":"es","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}},
+{"@type":"ListItem","position":2,"item":{"@type":"WebApplication","name":"Eurify","url":"https://eurify.app","description":"Control de gastos e ingresos personales, en español y en euros, pensado para el móvil.","applicationCategory":"FinanceApplication","operatingSystem":"Web","inLanguage":"es"}}
+]}]}
+</script>
+<style>
+:root{--bg:#eef1f4;--surface:#fff;--ink:#101820;--muted:#46525e;--line:#cfd6dd;--sp:#0b6b5a;--sp-ink:#fff;--eu:#4f35c4;--eu-ink:#fff;--fuel:#f2b705;--focus:#1a56db;color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1218;--surface:#151c24;--ink:#eef1f4;--muted:#a9b4be;--line:#2a343e;--sp:#4fd1b8;--sp-ink:#07211c;--eu:#a99bff;--eu-ink:#17103f;--focus:#8ab4ff}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.0625rem/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:1rem;top:-4rem;background:var(--ink);color:var(--bg);padding:.75rem 1rem;border-radius:6px;z-index:10}
+.skip:focus{top:1rem}
+.wrap{width:min(100% - 2.5rem,70rem);margin-inline:auto}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-block:1.25rem}
+.brand{font-weight:800;letter-spacing:-.02em;text-decoration:none;font-size:1.15rem}
+.brand span{display:inline-block;width:.6rem;height:.6rem;background:var(--fuel);border-radius:50%;margin-right:.5rem}
+nav ul{display:flex;gap:.25rem;list-style:none;margin:0;padding:0}
+nav a{display:inline-block;padding:.65rem .9rem;text-decoration:none;font-weight:600;border-radius:8px;color:var(--muted)}
+nav a:hover{color:var(--ink);background:var(--surface)}
+.hero{padding-block:clamp(3rem,9vw,7rem) clamp(2.5rem,6vw,4rem)}
+h1{font-size:clamp(2.4rem,7.2vw,5rem);line-height:1.02;letter-spacing:-.04em;font-weight:850;margin:0 0 1.5rem;max-width:16ch}
+.lead{font-size:clamp(1.1rem,2.2vw,1.35rem);color:var(--muted);max-width:44rem;margin:0}
+.hero>*{animation:in .7s ease both}
+.hero .lead{animation-delay:.12s}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+h2{font-size:clamp(1.5rem,3.5vw,2.1rem);letter-spacing:-.025em;line-height:1.15;margin:0 0 1.5rem}
+.projects{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));padding-bottom:clamp(3rem,7vw,5rem)}
+.card{background:var(--surface);border:1px solid var(--line);border-top:8px solid var(--accent);border-radius:14px;padding:clamp(1.5rem,3.5vw,2.25rem);display:flex;flex-direction:column}
+.sp{--accent:var(--sp);--on:var(--sp-ink)}
+.eu{--accent:var(--eu);--on:var(--eu-ink)}
+.card h3{font-size:clamp(1.8rem,4vw,2.4rem);letter-spacing:-.035em;line-height:1.05;margin:0 0 .35rem}
+.status{display:inline-block;font-size:.9rem;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:.1rem .75rem;margin:0 0 1.25rem}
+.card .what{font-size:1.2rem;font-weight:600;line-height:1.4;margin:0 0 1rem}
+.card ul{padding-left:1.15rem;margin:0 0 1.75rem;color:var(--muted)}
+.card li{margin-bottom:.5rem}
+.card li::marker{color:var(--accent)}
+.btn{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:.6rem;min-height:48px;padding:.7rem 1.25rem;background:var(--accent);color:var(--on);font-weight:700;text-decoration:none;border-radius:10px}
+.btn:hover{filter:brightness(1.08)}
+.btn svg{width:1.1rem;height:1.1rem}
+.inside{border-top:1px solid var(--line);padding-block:clamp(2.5rem,6vw,4rem)}
+dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:1.5rem 3rem;margin:0}
+dt{font-weight:700;margin-bottom:.25rem}
+dd{margin:0;color:var(--muted)}
+.inside p{color:var(--muted);max-width:44rem;margin:0 0 2rem}
+footer{border-top:1px solid var(--line);padding-block:2rem;color:var(--muted);font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.75rem 2rem}
+footer a{display:inline-block;padding:.4rem 0}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero>*{animation:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header>
+<div class="wrap">
+<a class="brand" href="/"><span aria-hidden="true"></span>Sin identidad</a>
+<nav aria-label="Principal"><ul><li><a href="#proyectos">Proyectos</a></li><li><a href="#por-dentro">Por dentro</a></li></ul></nav>
+</div>
+</header>
+<main id="contenido">
+<section class="hero wrap" aria-labelledby="titulo">
+<h1 id="titulo">Dos herramientas para gastar con cabeza</h1>
+<p class="lead">Esta web reúne dos proyectos independientes: uno te ayuda a pagar menos al repostar o recargar el coche, y el otro a saber en qué se va tu dinero cada mes. Los dos funcionan en el navegador y se pueden usar desde el móvil.</p>
+</section>
+<section class="wrap" id="proyectos" aria-labelledby="proyectos-t">
+<h2 id="proyectos-t">Proyectos</h2>
+<div class="projects">
+<article class="card sp" aria-labelledby="sp-t">
+<h3 id="sp-t">SinPasarte</h3>
+<p class="status">Disponible, gratuita y sin cuenta</p>
+<p class="what">Encuentra gasolineras baratas y puntos de recarga eléctrica en toda España.</p>
+<ul>
+<li>Busca por ubicación, dirección, código postal o GPS, y compara precios en lista o en mapa.</li>
+<li>Cada gasolinera tiene su ficha con precios, horario e histórico.</li>
+<li>Muestra los puntos de recarga de la red REVE, con conectores, potencia y tarifas cuando hay datos.</li>
+<li>Planifica gasolineras a lo largo de una ruta y rutas eléctricas con paradas de recarga.</li>
+<li>Guarda tus favoritos, tiene modo oscuro y sigue funcionando sin conexión.</li>
+</ul>
+<a class="btn" href="https://sinpasarte.com">Abrir SinPasarte<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+</article>
+<article class="card eu" aria-labelledby="eu-t">
+<h3 id="eu-t">Eurify</h3>
+<p class="status">En desarrollo</p>
+<p class="what">Controla tus gastos e ingresos personales, en español y en euros.</p>
+<ul>
+<li>Entrada rápida: escribes «12,50 comida mercadona» y la app entiende el importe, la categoría, la fecha y la etiqueta.</li>
+<li>Un resumen mensual con tu balance, la comparación con el mes anterior y un gráfico por categorías.</li>
+<li>Presupuestos mensuales por categoría y movimientos recurrentes que se generan solos.</li>
+<li>Pensada para instalarse en el móvil y sentirse como una app nativa.</li>
+<li>Puedes exportar tus datos y borrar tu cuenta cuando quieras.</li>
+</ul>
+<a class="btn" href="https://eurify.app">Abrir Eurify<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+</article>
+</div>
+</section>
+<section class="inside" id="por-dentro" aria-labelledby="dentro-t">
+<div class="wrap">
+<h2 id="dentro-t">Por dentro</h2>
+<p>Ambos proyectos están construidos con Node.js y Express, y se publican con el dominio y la protección de Cloudflare por delante.</p>
+<dl>
+<div><dt>SinPasarte</dt><dd>Servidor en Node.js con MongoDB Atlas. Los precios vienen de la API oficial del Ministerio para la Transición Ecológica, y los mapas, de Leaflet y OpenStreetMap.</dd></div>
+<div><dt>Eurify</dt><dd>Interfaz en React con Vite y base de datos Postgres. Las contraseñas se guardan cifradas con argon2id y el correo se verifica antes de entrar.</dd></div>
+</dl>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<p>© 2026 Sin identidad</p>
+<p><a href="https://sinpasarte.com">sinpasarte.com</a> &nbsp;·&nbsp; <a href="https://eurify.app">eurify.app</a></p>
+</div>
+</footer>
+</body>
+</html>
